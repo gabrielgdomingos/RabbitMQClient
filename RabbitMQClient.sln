@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SendApp", "SendApp\SendApp.csproj", "{7664D6FF-E444-4B93-85A8-387EF367FC37}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiveApp", "ReceiveApp\ReceiveApp.csproj", "{A2CB14FE-754D-46F2-B4B9-6339419A9D92}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7664D6FF-E444-4B93-85A8-387EF367FC37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7664D6FF-E444-4B93-85A8-387EF367FC37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7664D6FF-E444-4B93-85A8-387EF367FC37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7664D6FF-E444-4B93-85A8-387EF367FC37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2CB14FE-754D-46F2-B4B9-6339419A9D92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2CB14FE-754D-46F2-B4B9-6339419A9D92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2CB14FE-754D-46F2-B4B9-6339419A9D92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2CB14FE-754D-46F2-B4B9-6339419A9D92}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD8361F4-81A4-44D4-B400-07DD02EC0E28}
+	EndGlobalSection
+EndGlobal
