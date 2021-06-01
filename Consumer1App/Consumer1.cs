@@ -3,9 +3,9 @@ using RabbitMQ.Client.Events;
 using System;
 using System.Text;
 
-namespace ReceiveApp
+namespace App
 {
-    public static class Receive
+    public static class Consumer1
     {
         public static void Main()
         {
@@ -36,18 +36,25 @@ namespace ReceiveApp
 
                 var consumer = new EventingBasicConsumer(channel);
 
+                //RabbitMQ.Client recebe uma mensagem por vez
                 consumer.Received += (model, ea) =>
                 {
                     var body = ea.Body.ToArray();
+
                     var message = Encoding.UTF8.GetString(body);
-                    Console.WriteLine(" [x] Received {0}", message);
+
+                    //Console.WriteLine("Received: {0}", message);
+
+                    //Thread.Sleep(3000);
+
+                    Console.WriteLine("Value: {0}", message);
                 };
 
                 channel.BasicConsume(queue: name,
                                      autoAck: true,
                                      consumer: consumer);
 
-                Console.WriteLine(" Press [enter] to exit.");
+                Console.WriteLine("Waiting messages (press [enter] to exit)");
 
                 Console.ReadLine();
             }
