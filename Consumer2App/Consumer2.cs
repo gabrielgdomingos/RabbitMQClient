@@ -2,7 +2,6 @@
 using RabbitMQ.Client.Events;
 using System;
 using System.Text;
-using System.Threading;
 
 namespace App
 {
@@ -31,6 +30,7 @@ namespace App
                                      autoDelete: false,
                                      arguments: null);
 
+                //Não consegui aumentar prefetchCount e processar mensagens simultâneas
                 channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
 
                 var consumer = new EventingBasicConsumer(channel);
@@ -42,11 +42,9 @@ namespace App
 
                     var message = Encoding.UTF8.GetString(body);
 
-                    Console.WriteLine("Received: {0}", message);
+                    //Console.WriteLine("Received: {0}", message);
 
-                    int dots = message.Split('.').Length - 1;
-
-                    Thread.Sleep(dots * 1000);
+                    //Thread.Sleep(3000);
 
                     Console.WriteLine("Value: {0}", message);
 
